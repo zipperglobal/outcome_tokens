@@ -1,11 +1,11 @@
 import EVMRevert from '../node_modules/zeppelin-solidity/test/helpers/EVMRevert';
-var OutcomeBondToken = artifacts.require('OutcomeBondToken.sol');
+var OutcomeToken = artifacts.require('OutcomeToken.sol');
 var Voting = artifacts.require('AnybodyDecidesNoCap.sol');
 require('chai')
   .use(require('chai-as-promised'))
   .should();
 
-contract('OutcomeBondToken', function(accounts) {
+contract('OutcomeToken', function(accounts) {
     var Vote = {
         UNKNOWN: 0,
         MET: 1,
@@ -14,10 +14,10 @@ contract('OutcomeBondToken', function(accounts) {
 
     beforeEach(async function() {
         this.votingInstance = await Voting.new({from: accounts[0]});
-        this.tokenInstance = await OutcomeBondToken.new('test', this.votingInstance.address, {from: accounts[0]}); 
+        this.tokenInstance = await OutcomeToken.new('test', this.votingInstance.address, {from: accounts[0]}); 
     });
 
-    it('should create an Outcome Bond.', async function() {
+    it('should create an OutcomeToken.', async function() {
         let tokenName = await this.tokenInstance.name.call();
         let votingAddress = await this.tokenInstance.voting.call();
         assert.equal(tokenName, 'test');

@@ -1,0 +1,35 @@
+{
+  "name": "outcome_bonds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "node": "truffle develop",
+    "build": "truffle compile && truffle migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmedkex/outcome-bonds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmedkex/outcome-bonds/issues"
+  },
+  "homepage": "https://github.com/alexmedkex/outcome-bonds#readme",
+  "dependencies": {
+    "zeppelin-solidity": "^1.7.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.17.0",
+    "babel-register": "^6.23.0",
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.0.0",
+    "chai-bignumber": "^2.0.0"
+  }
+}
